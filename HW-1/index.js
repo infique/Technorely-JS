@@ -21,4 +21,5 @@
                     Корней уровнения нет`;
     }
     console.log(quad(arr[0],arr[1],arr[2]));
+// or
     console.log(quad(1, 0, -4));
