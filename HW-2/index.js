@@ -8,22 +8,22 @@ Inside function fun1, assign 5 to oopsGlobal without using the var keyword.
     myGlobal should be declared using the var keyword
     oopsGlobal should be a global variable and have a value of 5
 */
-    // Declare the myGlobal variable below this line
-    var myGlobal = 10;
-    function fun1 () {
-        // Assign 5 to oopsGlobal Here
-        oopsGlobal = 5;
+ // Declare the myGlobal variable below this line
+var myGlobal = 10;
+function fun1 () {
+    // Assign 5 to oopsGlobal Here
+    oopsGlobal = 5;
+}
+fun1();
+fun2();
+//Only change code above this line
+function fun2(){
+    var output = '';
+    if (typeof myGlobal && oopsGlobal != 'undefined'){
+         output += `myGlobal: ${myGlobal}, oopsGlobal: ${oopsGlobal}`
     }
-    fun1();
-    fun2();
-    //Only change code above this line
-    function fun2(){
-        var output = '';
-        if (typeof myGlobal && oopsGlobal != 'undefined'){
-            output += `myGlobal: ${myGlobal}, oopsGlobal: ${oopsGlobal}`
-        }
-        console.log(output)
-    }
+    console.log(output)
+}
 
 /* -------------------- ЗАДАНИЕ 2 ---------------------------
 The editor has two console.logs to help you see what is happening. 
@@ -34,14 +34,14 @@ Note: The console will still have 'ReferenceError: myVar is not defined', but th
     The code should not contain a global myVarvariable.
     You should add a local myVar variable.
 */
-    function myLocalScope() {
-        'use strict';
-        var myVar;
-        // Only change code below this line
-        console.log('inside myLocalScope', myVar);
-    }
-    myLocalScope();
+function myLocalScope() {
+    'use strict';
+    var myVar;
+    // Only change code below this line
+    console.log('inside myLocalScope', myVar);
+}
+myLocalScope();
 
-    // Run and chek the console
-    // myVar is not defined outside of myLocalScope;
-    console.log('outside myLocalScope', myVar);
+// Run and chek the console
+// myVar is not defined outside of myLocalScope;
+console.log('outside myLocalScope', myVar);
